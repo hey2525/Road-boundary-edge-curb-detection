@@ -15,6 +15,7 @@
   
 ## Dataset:
   Using rosbag.
+  
   This package using rosbag-data collected by velodyne-lidar. That means u should change your databag which is collected by other lidar to rosbag type in this package. If your bag is velodyne-rosbag, you should install the Velodyne-Package.
     
   Whats more, velodyne-rosbag provide a special parameter "ring" for each point in the point cloud. The "ring" indicate which line/ring/channels this point belongs to. For example, point-a's ring[20] means it belongs to the 21st channels. If your points didn't include this parameter, you can use some common algorithms to categorize your pointcloud into different ring[]arrays.
@@ -24,8 +25,18 @@
   
 ## Run
   Terminal 1 : roscore
+  
   Terminal 2 : rviz
+  
   Terminal 3 : rosrun fast_curb_detection main (in your workspace)
+  
   Terminal 4 : rosbag play yourbag.bag
+  
+## Result
+  ![ph1](https://github.com/hey2525/Road-boundary-edge-curb-detection/blob/master/ph1.JPG)
+  
+  ![ph2](https://github.com/hey2525/Road-boundary-edge-curb-detection/blob/master/ph2.JPG)
+  
+  
   
 
